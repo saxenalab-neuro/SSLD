@@ -8,7 +8,7 @@ experiment:
   ckp: false
 
 system:
-  device: "cuda"          # "cuda" or "cpu" or "auto"
+  device: "auto"          # "cuda" or "cpu" or "auto"
   dtype: "float32"        # "float32" or "float64"
   cudnn_benchmark: true
 
