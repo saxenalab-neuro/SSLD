@@ -1,22 +1,63 @@
 # Switching Shared Latent Dynamics (SSLD)
 
-This repo is about the work of Switching Shared Latent Dynamics (SSLD). Publication available at: [Learning Interpretable Switching Dynamics in Shared Neural-Behavioral Latent Space]()
+This repository contains the official implementation of **Switching Shared Latent Dynamics (SSLD)**. For details, please refer to our publication:
 
-![Switching Recurrent Neural Networks](data/ssld.png)
+> [Learning Interpretable Switching Dynamics in Shared Neural-Behavioral Latent Space]()
 
-# Installation for Development
+![SSLD Overview](data/ssld.png)
 
-# Implementation
-1. git clone this repo to your local folder
-2. build environment
+---
+
+## Installation
+
+### 1. Clone the repository
+```bash
+git clone <repo-url>
+cd SSLD_area2
 ```
-conda env create --file environment_srnn.yml
+
+### 2. Create the conda environment
+```bash
+conda env create -f environment.yml
 conda activate SSLD
 ```
-3. If environment is not built successfully, do 'pip install'+all missed packages, they are common packages in this experiment. 
-4. ```python 1_demo_lorenz.py``` (example running) 
-5. or open demo_lorenz.ipynb
 
-# Details
-1. SRNN: model of SRNN
-2. demo_lorenz.ipynb: Demo notebook
+> **Note:** If the environment creation fails, manually install any missing packages via `pip install <package>`. All dependencies are standard scientific Python packages.
+
+---
+
+## Running the Model
+
+### Single fold (example)
+```bash
+python array_area2.py --config array_config.yaml --fold 0
+```
+
+### Full 5-fold run
+```bash
+array_run_local.bat
+```
+This sequentially runs all 5 folds. Note that a full run may take a significant amount of time depending on your hardware.
+
+---
+
+## Post-run Analysis
+
+After completing the 5-fold run, generate figures by running:
+```bash
+python post_run.py
+```
+Output figures will be saved to the `plot/` directory.
+
+---
+
+## Extended Analysis
+
+To reproduce the comparison between condition similarity and shared latent similarity (Fig. 3D and 3E), first run:
+```bash
+python entire_area2.py --config array_config.yaml --fold 0
+```
+Then generate the corresponding figures with:
+```bash
+python entire_post_run.py
+```
