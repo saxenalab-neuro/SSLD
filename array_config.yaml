@@ -1,0 +1,36 @@
+experiment:
+  jobid: 0
+  seed: 131
+  fold: 0
+  data_path: "./data/act_save_single_200.npy"
+  data_beh_path: "./data/handvel_save_single_200.npy"
+  save_dir: "./result"
+  ckp: false
+
+system:
+  device: "cuda"          # "cuda" or "cpu" or "auto"
+  dtype: "float32"        # "float32" or "float64"
+  cudnn_benchmark: true
+
+model:
+  num_tv: 2
+  hidden_shape: 8
+  bottleneck_shape: 16
+  beh_private_shape: 8
+  neural_private_shape: 8
+
+train:
+  ini_epochs: 2000
+  epochs: 2000
+  lr: 0.001
+  coef_cross: 0.5
+  coef_cross_beh: 10
+  batch_size: 32
+  alp1: 50000
+  alp2: 50000
+  alp3: 50000
+  t_load: null
+
+optim:
+  step_size: 2000
+  gamma: 0.8
