@@ -17,8 +17,16 @@ cd SSLD
 ```
 
 ### 2. Create the conda environment
+
+**Windows (NVIDIA GPU):**
 ```bash
 conda env create -f environment.yml
+conda activate SSLD
+```
+
+**Mac (Apple Silicon):**
+```bash
+conda env create -f environment_mac.yml
 conda activate SSLD
 ```
 
