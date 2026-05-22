@@ -1,8 +1,8 @@
-# Switching Recurrent Neural Networks
+# Switching Shared Latent Dynamics (SSLD)
 
-This repo is about the work of Switching Recurrent Neural Networks (SRNNs). Publication available at: [Inference of neural dynamics using switching recurrent neural networks](https://openreview.net/pdf/a72b19b658dbec5e7192f749e9871e5279caf5ab.pdf)
+This repo is about the work of Switching Shared Latent Dynamics (SSLD). Publication available at: [Learning Interpretable Switching Dynamics in Shared Neural-Behavioral Latent Space]()
 
-![Switching Recurrent Neural Networks](data/srnn.png)
+![Switching Recurrent Neural Networks](data/ssld.png)
 
 # Installation for Development
 
@@ -11,7 +11,7 @@ This repo is about the work of Switching Recurrent Neural Networks (SRNNs). Publ
 2. build environment
 ```
 conda env create --file environment_srnn.yml
-conda activate SwitchingRNN
+conda activate SSLD
 ```
 3. If environment is not built successfully, do 'pip install'+all missed packages, they are common packages in this experiment. 
 4. ```python 1_demo_lorenz.py``` (example running) 
