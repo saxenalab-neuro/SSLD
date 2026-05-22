@@ -45,6 +45,10 @@ python array_area2.py --config array_config.yaml --fold 0
 ```bash
 array_run_local.bat
 ```
+or
+```bash
+for %i in (0 1 2 3 4) do python array_area2.py --config array_config.yaml --fold %i
+```
 This sequentially runs all 5 folds. Note that a full run may take a significant amount of time depending on your hardware.
 
 ---
