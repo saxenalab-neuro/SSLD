@@ -13,7 +13,7 @@ This repository contains the official implementation of **Switching Shared Laten
 ### 1. Clone the repository
 ```bash
 git clone <repo-url>
-cd SSLD_area2
+cd SSLD
 ```
 
 ### 2. Create the conda environment
