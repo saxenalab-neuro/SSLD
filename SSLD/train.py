@@ -25,7 +25,7 @@ def train_(model,rnninfer,behinfer,sharedecoder,optimizer,optimizer_rnn,optimize
     pos_test_save_all=np.zeros((epochs,y_test.shape[0],y_test.shape[1],num_tv))
     cs_criterion=csLoss(5)
     pp=initialization.one_hot(label_train.cpu().detach().numpy()[:,:,0],num_tv)
-    pp=torch.tensor(pp,device=device)
+    pp=torch.tensor(pp,dtype=label_train.dtype,device=device)
 
     tds = TensorDataset(X_train,y_train,beh_train,pp)
     data_loader = DataLoader(tds, batch_size=batch_size, shuffle=True, drop_last=True)

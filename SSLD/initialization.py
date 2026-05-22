@@ -33,7 +33,7 @@ def run(model,rnninfer,behinfer,sharedecoder,optimizer,optimizer_rnn,optimizer_b
     cs_criterion=csLoss(5)
     # cs_criterion = cs_criterion.to(device)
     pp=one_hot(label_train.cpu().detach().numpy()[:,:,0],num_tv)
-    pp=torch.tensor(pp,device=device)
+    pp=torch.tensor(pp,dtype=label_train.dtype,device=device)
 
     tds = TensorDataset(X_train,y_train,beh_train,pp)
     data_loader = DataLoader(tds, batch_size=batch_size, shuffle=True, drop_last=True)
