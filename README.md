@@ -12,7 +12,7 @@ This repository contains the official implementation of **Switching Shared Laten
 
 ### 1. Clone the repository
 ```bash
-git clone <repo-url>
+git clone https://github.com/saxenalab-neuro/SSLD.git
 cd SSLD
 ```
 
