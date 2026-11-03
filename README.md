@@ -2,7 +2,7 @@
 
 This repository contains the official implementation of **Switching Shared Latent Dynamics (SSLD)**. For details, please refer to our publication:
 
-> [Learning Interpretable Switching Dynamics in Shared Neural-Behavioral Latent Space](https://doi.org/10.64898/2026.10.02.756323)
+> [[NeurIPS 2026] Learning Interpretable Switching Dynamics in Shared Neural-Behavioral Latent Space](https://doi.org/10.64898/2026.10.02.756323)
 
 ![SSLD Overview](data/ssld.png)
 
